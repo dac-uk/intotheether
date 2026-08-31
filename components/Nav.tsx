@@ -25,7 +25,7 @@ export default function Nav() {
             INTO THE ETHER
           </span>
           <span className="font-jp text-xs text-fog transition-colors group-hover:text-neon-magenta">
-            イーサリアムへ
+            イーサの中へ
           </span>
         </Link>
 

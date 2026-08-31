@@ -55,7 +55,7 @@ export default function Home() {
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-void/40 to-void" />
         <div className="relative mx-auto max-w-6xl px-4 py-28 text-center md:py-40">
           <p className="font-jp text-sm tracking-[0.5em] text-neon-magenta neon-pulse">
-            イーサリアムへようこそ
+            イーサの中へようこそ
           </p>
           <h1 className="mt-6 font-display text-4xl font-black tracking-[0.15em] text-ice md:text-7xl">
             INTO THE{" "}

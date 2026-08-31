@@ -23,7 +23,7 @@ const notoJp = Noto_Sans_JP({
 
 export const metadata: Metadata = {
   title: {
-    default: "Into The Ether — イーサリアム",
+    default: "Into The Ether — イーサの中へ",
     template: "%s | Into The Ether",
   },
   description:

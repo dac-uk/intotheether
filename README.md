@@ -1,4 +1,4 @@
-# Into The Ether — イーサリアム
+# Into The Ether — イーサの中へ
 
 A neon-lit, neo-Tokyo cyberpunk deep dive into **Ethereum, Ether, DeFi, web3
 and the future of finance, freedom and personal wealth**.
