@@ -19,3 +19,9 @@ all routes 200 on production, post-deploy error log scan clean. External data
 (ETH ticker) fetched client-side from CoinGecko with silent fallback.
 Follow-up ideas (not done): custom domain, OG image, more art pieces,
 per-topic reading-progress persistence via localStorage.
+
+## Sprint 2 (2026-08-31) — Observatory, ranks, content wave two
+- [x] /observatory: live mainnet telemetry (keyless public RPC w/ fallback, CORS-verified), 6 stat tiles, base-fee sparkline w/ hover, block feed table, 12s refresh
+- [x] Progress: localStorage quiz/read tracking, rank badge (INITIATE→OPERATOR→ARCHITECT), DECODED card badges, clearance bar on /learn
+- [x] 7 new topics → 21 total: mev-dark-forest, ethereum-roadmap, privacy-tech, gas-and-fees + Field Manual track (first-wallet, crossing-to-l2, first-onchain-moves)
+- [x] Verified: build 31 pages, lint clean, browser-tested quiz→progress write path and Observatory hydration on localhost AND production
