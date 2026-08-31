@@ -22,6 +22,7 @@ export default function Footer() {
             <ul className="mt-3 space-y-1 text-xs">
               {[
                 ["/learn", "Deep Dives"],
+                ["/observatory", "Observatory"],
                 ["/interact", "Interactive Tools"],
                 ["/art", "Digital Art"],
                 ["/timeline", "Timeline"],

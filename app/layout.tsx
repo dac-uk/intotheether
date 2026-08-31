@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Orbitron, JetBrains_Mono, Noto_Sans_JP } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { topics } from "@/content/topics";
 import "./globals.css";
 
 const orbitron = Orbitron({
@@ -48,7 +49,7 @@ export default function RootLayout({
         className={`${orbitron.variable} ${jetbrains.variable} ${notoJp.variable} antialiased min-h-screen flex flex-col`}
       >
         <div className="crt-overlay" aria-hidden="true" />
-        <Nav />
+        <Nav totalTopics={topics.length} />
         <main className="flex-1">{children}</main>
         <Footer />
       </body>

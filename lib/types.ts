@@ -1,4 +1,9 @@
-export type TopicCategory = "foundations" | "defi" | "frontier" | "culture";
+export type TopicCategory =
+  | "foundations"
+  | "defi"
+  | "frontier"
+  | "culture"
+  | "manual";
 export type TopicLevel = "initiate" | "operator" | "architect";
 export type GlowColor = "cyan" | "magenta" | "violet" | "amber" | "green";
 

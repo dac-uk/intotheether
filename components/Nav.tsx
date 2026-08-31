@@ -4,16 +4,18 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import EthTicker from "@/components/EthTicker";
+import RankBadge from "@/components/RankBadge";
 
 const links = [
   { href: "/learn", label: "LEARN", kana: "学" },
+  { href: "/observatory", label: "OBSERVATORY", kana: "観" },
   { href: "/interact", label: "INTERACT", kana: "操" },
   { href: "/art", label: "ART", kana: "芸" },
   { href: "/timeline", label: "TIMELINE", kana: "史" },
   { href: "/glossary", label: "GLOSSARY", kana: "語" },
 ];
 
-export default function Nav() {
+export default function Nav({ totalTopics }: { totalTopics: number }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -24,12 +26,12 @@ export default function Nav() {
           <span className="font-display text-lg font-black tracking-widest neon-cyan">
             INTO THE ETHER
           </span>
-          <span className="font-jp text-xs text-fog transition-colors group-hover:text-neon-magenta">
+          <span className="font-jp hidden whitespace-nowrap text-xs text-fog transition-colors group-hover:text-neon-magenta lg:inline">
             イーサの中へ
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 md:flex">
+        <nav className="hidden items-center gap-4 md:flex lg:gap-6">
           {links.map((l) => {
             const active = pathname.startsWith(l.href);
             return (
@@ -45,6 +47,7 @@ export default function Nav() {
               </Link>
             );
           })}
+          <RankBadge totalTopics={totalTopics} />
           <EthTicker />
         </nav>
 
@@ -70,7 +73,8 @@ export default function Nav() {
               {l.label}
             </Link>
           ))}
-          <div className="py-2">
+          <div className="flex items-center gap-4 py-2">
+            <RankBadge totalTopics={totalTopics} />
             <EthTicker />
           </div>
         </nav>

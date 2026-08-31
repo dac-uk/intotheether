@@ -2,8 +2,15 @@
 
 import { useState } from "react";
 import type { QuizQuestion } from "@/lib/types";
+import { recordQuiz } from "@/lib/progress";
 
-export default function Quiz({ questions }: { questions: QuizQuestion[] }) {
+export default function Quiz({
+  questions,
+  slug,
+}: {
+  questions: QuizQuestion[];
+  slug?: string;
+}) {
   const [current, setCurrent] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
   const [score, setScore] = useState(0);
@@ -19,6 +26,7 @@ export default function Quiz({ questions }: { questions: QuizQuestion[] }) {
 
   function next() {
     if (current + 1 >= questions.length) {
+      if (slug) recordQuiz(slug, score, questions.length);
       setDone(true);
     } else {
       setCurrent((c) => c + 1);

@@ -10,7 +10,15 @@ const gateways = [
     title: "DEEP DIVES",
     glow: "glow-border-cyan",
     text: "text-neon-cyan",
-    desc: "Fourteen transmissions on Ethereum, DeFi, ZK, self-custody and the future of money. From initiate to architect.",
+    desc: "Deep transmissions on Ethereum, DeFi, ZK, self-custody and the future of money — plus a practical field manual. Decode them all to reach ARCHITECT.",
+  },
+  {
+    href: "/observatory",
+    kana: "観測",
+    title: "OBSERVATORY",
+    glow: "glow-border-green",
+    text: "text-neon-green",
+    desc: "The chain, live: block height, gas, burn rate and blob traffic read straight from mainnet.",
   },
   {
     href: "/interact",

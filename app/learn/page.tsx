@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { topics } from "@/content/topics";
 import TopicCard from "@/components/TopicCard";
+import LearnProgress from "@/components/LearnProgress";
 import type { TopicCategory } from "@/lib/types";
 
 export const metadata: Metadata = {
@@ -34,6 +35,12 @@ const categories: { key: TopicCategory; label: string; kana: string; blurb: stri
     kana: "文化",
     blurb: "The ideas underneath: cypherpunks, sovereignty, code-borne organisations, on-chain art.",
   },
+  {
+    key: "manual",
+    label: "FIELD MANUAL",
+    kana: "実践",
+    blurb: "Practical missions: wallet up, cross to L2, make your first moves — safely.",
+  },
 ];
 
 export default function LearnPage() {
@@ -46,11 +53,15 @@ export default function LearnPage() {
         DEEP <span className="neon-cyan">DIVES</span>
       </h1>
       <p className="mt-4 max-w-2xl text-sm leading-relaxed text-fog">
-        Fourteen transmissions, four frequencies. Each one is a self-contained
-        descent: the concepts, the mechanisms, the honest risks, a knowledge
-        check to prove you decoded it — and outbound links to go deeper. Start
-        anywhere. The ether doesn&apos;t care about order.
+        {topics.length} transmissions, five frequencies. Each one is a
+        self-contained descent: the concepts, the mechanisms, the honest risks,
+        a knowledge check to prove you decoded it — and outbound links to go
+        deeper. Pass a quiz to mark a transmission{" "}
+        <span className="text-neon-green">DECODED</span>; decode them all to
+        reach <span className="text-neon-magenta">ARCHITECT</span> clearance.
       </p>
+
+      <LearnProgress totalTopics={topics.length} />
 
       {categories.map((cat) => {
         const catTopics = topics.filter((t) => t.category === cat.key);

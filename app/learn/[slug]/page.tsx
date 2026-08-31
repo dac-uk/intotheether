@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { topics, topicBySlug } from "@/content/topics";
 import { renderInline, glowText } from "@/lib/markup";
 import Quiz from "@/components/Quiz";
+import ProgressMarker from "@/components/ProgressMarker";
 
 export function generateStaticParams() {
   return topics.map((t) => ({ slug: t.slug }));
@@ -35,6 +36,7 @@ export default async function TopicPage({
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-14">
+      <ProgressMarker slug={topic.slug} />
       {/* header */}
       <p className="font-mono text-[10px] tracking-widest text-fog">
         <Link href="/learn" className="hover:text-neon-cyan">
@@ -96,7 +98,7 @@ export default async function TopicPage({
         <h2 className="mb-4 font-display text-sm tracking-[0.3em] text-ice">
           ▞▚ PROVE THE DECODE
         </h2>
-        <Quiz questions={topic.quiz} />
+        <Quiz questions={topic.quiz} slug={topic.slug} />
       </section>
 
       {/* explore */}

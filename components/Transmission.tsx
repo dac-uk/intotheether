@@ -60,6 +60,26 @@ const signals: Signal[] = [
     link: "/learn/daos-governance",
     linkLabel: "Organisations as code",
   },
+  {
+    text: "The mempool is a dark forest: broadcast a profitable transaction naively and bots will spot it, copy it, and front-run you before it ever reaches a block.",
+    link: "/learn/mev-dark-forest",
+    linkLabel: "Enter the dark forest",
+  },
+  {
+    text: "A failed Ethereum transaction still costs gas — the network did the work of discovering it would fail. Understanding fees is cheaper than paying for that lesson.",
+    link: "/learn/gas-and-fees",
+    linkLabel: "Decode the fee machine",
+  },
+  {
+    text: "No legitimate person, app, or support agent will ever ask for your seed phrase. Not once. Not ever. Anyone who does is stealing from you.",
+    link: "/learn/first-wallet",
+    linkLabel: "Run the wallet ceremony",
+  },
+  {
+    text: "Right now, a new Ethereum block is being produced — as one has been every twelve seconds, without pause, for years. You can watch it happen live.",
+    link: "/observatory",
+    linkLabel: "Open the observatory",
+  },
 ];
 
 export default function Transmission() {

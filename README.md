@@ -7,9 +7,14 @@ Live: https://intotheether.vercel.app
 
 ## What's inside
 
-- **/learn** — 14 deep-dive articles across four tracks (Foundations, Open
-  Finance, The Frontier, The Culture), each with key takeaways, an interactive
-  knowledge-check quiz, and curated outbound links to continue exploring.
+- **/learn** — 21 deep-dive articles across five tracks (Foundations, Open
+  Finance, The Frontier, The Culture, and a practical Field Manual), each with
+  key takeaways, an interactive knowledge-check quiz, and curated outbound
+  links to continue exploring. Quiz results and reading progress persist in
+  localStorage and feed a site-wide rank (INITIATE → OPERATOR → ARCHITECT).
+- **/observatory** — live mainnet telemetry over public JSON-RPC: block
+  height, gas, burn rate, block fullness, blob traffic, a base-fee sparkline
+  and a rolling block feed. No API keys, no backend.
 - **/interact** — live instruments: an EIP-1559 burn simulator, staking yield
   projector, keccak-256 playground, and a deterministic generative sigil forge.
 - **/art** — four generative art pieces rendered live on canvas (digital rain,
