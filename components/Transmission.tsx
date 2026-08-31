@@ -66,6 +66,8 @@ export default function Transmission() {
   const [index, setIndex] = useState<number | null>(null);
 
   useEffect(() => {
+    // Random pick must happen after hydration — the server can't know it.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIndex(Math.floor(Math.random() * signals.length));
   }, []);
 
